@@ -1,0 +1,24 @@
+#Don’t use sudo if you have admin privileges.
+Step 1: DHCP Server Installation 
+Run the command as explained:
+Sudo apt-get -y install disc-dhcp-server
+Edit this file /etc/default/isc-dhcp-server and state the interfaces DHCPD to cater the requests.
+Command - Change Interface Option (INTERFACES="eth0")
+
+Step 2: Configuring the Server
+The /etc/dhcp/dhcpd.conf is the location of configuration file
+For Modification use:
+Command - sudo vi /etc/dhcp/dhcpd.conf
+Configure by:
+Command - sudo nano /etc/dhcp/dhcpd.conf
+Replace existing IP with your current IP
+(To know IPAddress command is - ifconfig)
+
+Step 3: To enable services
+Command - sudo systemctl enable isc-dhcp-server.service
+
+Step 4: To start the services
+Command - sudo systemctl start isc-dhcp-server.service
+
+
+
