@@ -1,0 +1,35 @@
+#Note : Use sudo only if you don't have admin privileges! 
+
+Adding a New User:
+Command : adduser username
+
+
+Network Configurations:
+Command :- sudo ifconfig -a
+
+
+IP address and Netmask:
+Command:- sudo ifconfig eth0 192.168.1.10 netmask 255.255.255.0
+
+
+Configure Services In Kali Linux:
+Command : service ssh start
+Command : ssh username@hostname
+
+
+Command To Run , Enable , Start and Stop Services:
+Command : systemctl [command] [service_name]
+
+
+To stop and restart the service in Linux, use the command:
+Command : sudo systemctl restart/stop SERVICE_NAME
+
+
+To Enable Services At Boot
+Command : sudo systemctl enable SERVICE_NAME
+
+
+To display the list of all services running presently
+Command : sudo systemctl -t=service --state=running
+
+
