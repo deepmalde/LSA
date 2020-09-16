@@ -1,0 +1,29 @@
+#use sudo in absence of admin privileges!
+
+Step 1: Install nfs server
+Command: apt-get -y install nfs-kernel-server
+
+Step 2: Create a new directory and add a file in that directory.
+Command: mkdir deep
+Open shell script and add a file:
+Command: vi deep.txt
+
+Step 3:
+Open /etc/exports file with support of nano
+Command: nano /etc/exports
+
+Step 4:
+Add the line at End
+Command: home/kali/dir_name 127.0.0.1(rw)  
+
+Step 5:
+To create a table and keep the records use the command:
+Command: export -ra 
+
+Step 6:
+To install nfs-common:
+Command: apt-get -y install nfs-common
+
+Step 7:
+Mount the file you want to transfer in desired directory
+Command: mount -t nfs 127.0.0.1:[host_directory_name] [client_directory  name]
